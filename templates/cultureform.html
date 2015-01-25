@@ -39,6 +39,36 @@
         this.style.height = this.scrollHeight + 'px';
     	}, false);
 	}
+
+	<script type="text/javascript"]>
+
+$(document).ready(function() {
+Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+var theCountry = Parse.Object.extend("Country");
+}
+
+
+
+function trying(){	
+	alert("Submitted!");
+}
+
+    /*var culture = $("#culture").val();
+    var cultureValues = $("#cultureValues").val();
+    var cultureFood = $("#cultureFood").val();
+    var cultureFashion = $("#cultureFashion").val();
+    
+    var citizenContribution = new theCountry();
+
+    citizenContribution.save({Name:culture, value: cultureValues, food:cultureFood, fashion:cultureFashion});
+    });
+});
+console.log(culture);
+console.log(cultureValues);
+console.log(cultureFashion);
+console.log(cultureFood);
+}*/
+</script>
 	</script>
   </head>
 
@@ -103,7 +133,7 @@
 	<div id="footerwrap">
 		<div class="container">
 			<div class="row centered">
-				<button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit">Learn</button>
+				<button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit" onclick="trying();">Contribute</button>
 			</div>
 		</div>
 	</div>
@@ -117,17 +147,21 @@
 
 {% endblock %}
 
-{% block javascript %}
-<script type="text/javascript">
+<!--{% block javascript %}
+<script type="text/javascript"]>
 
-$( document ).ready(function() {
-
+$(document).ready(function() {
 Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
 var theCountry = Parse.Object.extend("Country");
+}
 
 
-$("#submitData").click( function() {
-    var culture = $("#culture").val();
+
+function trying(){	
+	alert("Submitted!");
+}
+
+    /*var culture = $("#culture").val();
     var cultureValues = $("#cultureValues").val();
     var cultureFood = $("#cultureFood").val();
     var cultureFashion = $("#cultureFashion").val();
@@ -136,11 +170,11 @@ $("#submitData").click( function() {
 
     citizenContribution.save({Name:culture, value: cultureValues, food:cultureFood, fashion:cultureFashion});
     });
-    alert("Submitted!");
 });
 console.log(culture);
 console.log(cultureValues);
 console.log(cultureFashion);
 console.log(cultureFood);
+}*/
 </script>
 {% endblock %}
