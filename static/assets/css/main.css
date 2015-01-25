@@ -109,6 +109,8 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     margin-top: 25px;
     border-radius: 25px !important;
+    text-align: center;
+    vertical-align: center;
 }
 
 #changed1 {
