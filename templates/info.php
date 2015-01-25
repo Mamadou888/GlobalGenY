@@ -22,8 +22,8 @@
 
 		body{
 			background-image: url(static/assets/img/nyc1.jpg);
-			background-size:  100%;
-		}
+			}
+
 		</style>
 
 
