@@ -79,10 +79,12 @@
 			<div class="row centered">
 				<button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit">Contribute to Society</button>
 
+      </div>
+    </div>
+
 			</div>
 		</div>
 	</div>
-	
 
 </body>
 </html>
@@ -93,6 +95,8 @@
 <script type="text/javascript"]>
 
 $(document).ready(function() {
+	$("#culture").focus();
+
 
 Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
 var theCountry = Parse.Object.extend("Country");
@@ -124,9 +128,7 @@ function expandTextarea(id) {
     }, false);
 }
 
-function trying(){  
-    alert("Submitted!");
-}
+
 
 });
 

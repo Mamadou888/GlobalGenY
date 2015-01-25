@@ -1,11 +1,16 @@
 
+#sub{
+    font-size: 25px;
+    font-weight: bold;
+}
+
 #title{
     font-size: 100px;
 }
 
 .fonting{
 font-family: 'Poiret One', cursive;
-color: #E0E0E0 ;
+color: white ;
 font-weight: bold;
 }
 
@@ -19,7 +24,7 @@ font-weight: bold;
 
 body {
   background-color: #f2f2f2;
-    font-family: 'EB Garamond', serif;
+font-family: 'Poiret One', cursive;
     font-weight: 300;
     font-size: 16px;
     color: #555;
@@ -105,16 +110,31 @@ h1 {
 #changed {
     width: 450px !important;
     height: 70px !important;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Montserrat', sans-serif;
     margin-top: 25px;
-    border-radius: 25px !important;
+    border-radius: 10px !important;
     text-align: center;
     vertical-align: center;
 }
 
 #changed1 {
     width: 450px !important;
-    margin-top: 20px;
-    border-radius: 25px !important;
+    margin-top: 10px;
+    border-radius: 10px !important;
+    font-size: 20px;
+    font-weight: bold;
+        color: #555;
+
+}
+
+#changed2 {
+    width: 450px !important;
+    margin-top: 50px;
+    border-radius: 10px !important;
+    font-size: 20px;
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+
 }
