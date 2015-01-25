@@ -1,37 +1,69 @@
 {% extends "layout.html" %}
-<style type="text/css">
-	h1{
-		text-align: center;
-		text-transform: capitalize;
-		color: #2E8AE6;
-		font-family: 'Oswald', sans-serif;
-		padding-top: 5px;
-	}
-
-	h3{
-		text-align: center;
-		font-style: oblique;
-		font-size: 130%;
-	}
-
-	p{
-		padding-left: 75px;
-		padding-right:75px;
-		font-size: 120%;
-	}
-
-	body{
-		background-image: url(static/assets/img/2.jpg);
-		background-size: 100%;
-
-	}
-</style>
 
 {% block content %}
 
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <title>INSTANT - Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/assets1/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/assets1/css/style.css" rel="stylesheet">
+
+    <link href="static/assets1/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href="static/assets1/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
 <body>
-	<h1>Name of Country's Culture</h1>
-	<h3>Social Values</h3>
+
+	<div id="headerwrap">
+       <div class="container">
+         <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+               <img src="static/assets1/chat.png" id="chat">
+                 <!--<p class="imgDescription">Chat</p>-->
+               <h4>WELCOME TO</h4>
+               <h1> COUNTRY'S CULTURE</h1>
+           </div>
+       </div><!--/row -->
+   </div> <!-- /container -->
+</div><!--/headerwrap -->
+
+<section id="etiquette" name="etiquette"></section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 name">
+					<p>ETIQUETTE & CUSTOMS</p>
+				</div><! --/col-lg-4-->
+				<div class="col-lg-8 name-desc">
+					
+					<div class="col-md-6">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+						<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+					<div class="col-md-6">
+						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+						<p> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
+					</div>
+					
+				</div><! --/col-lg-8-->
+		
+			</div><!-- /row -->
+		</div><!-- /container -->
+
+<div class="container">
+
+	<h3>Values and Etiquette</h3>
 	<div class="valuesInfo">
 
 		<ul class="valuesList">
@@ -40,6 +72,9 @@
 			</li>
 		</ul>
 	</div>
+
+		<div class="sep about" data-stellar-background-ratio="0.5"></div>
+
 
 	<h3>Food</h3>
 	<div class="detailsOnCountry">
@@ -62,11 +97,23 @@
 				</li>	
 			</ul>
 		</div>		
-			</body>
+</div><!--/container -->
+	
+	<div id="footerwrap">
+			
+    </div>
 
-			{% endblock %}
+			</div>
+		</div>
+	</div>
 
-			{% block javascript %}
+</body>
+
+{% endblock %}
+
+
+
+{% block javascript %}
 			<script type="text/javascript"]>
 
 				$(document).ready(function() {
@@ -118,12 +165,6 @@
 
 </script>
 {% endblock %}
-
-
-
-
-
-
 
 
 

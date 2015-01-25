@@ -267,3 +267,10 @@ textarea {
 #submitData{
 	width: 300px;
 }
+
+#chat{
+	position: fixed;
+	top:20px;
+	right: 20px;
+	vertical-align: top;
+}
