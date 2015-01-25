@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-.left{
-    display: inline-block;
-    float: left;
-    width: 50%;
-    margin: 0px;
-
-}
-
-.right{
-        display: inline-block;
-    float: right;
-    width: 50%;
-    margin: 0px;
-=======
-.headerimage{
-    display: inline;
-    float: left;
-    max-width: 10%;
-
->>>>>>> FETCH_HEAD
-}
-
-
 
 #sub{
     font-size: 25px;
@@ -131,18 +107,17 @@ h1 {
 	padding: 12px;
 }
 
-#changed {
+#clientsCountry {
     width: 450px !important;
     height: 70px !important;
     font-size: 35px;
-    font-family: 'Montserrat', sans-serif;
     margin-top: 25px;
     border-radius: 10px !important;
     text-align: center;
     vertical-align: center;
 }
 
-#changed1 {
+#learnButton {
     width: 450px !important;
     margin-top: 10px;
     border-radius: 10px !important;
