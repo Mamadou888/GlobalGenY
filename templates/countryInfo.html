@@ -84,20 +84,26 @@
 		   		objId = obj.id;
 		   		i++;
 		   		retrievedData.get(objId ,{
-		   			success: function(country) {
-		   				var cultureId = country.id;
-		   				var culture = country.get("Name")
-		   				var cultureValues = country.get("value");
-		   				var cultureFood = country.get("food");
-		   				var cultureFashion = country.get("fashion");
-		   				console.log(culture);
-		   				console.log(cultureValues);
-		   				console.log(cultureFood);
-		   				console.log(cultureFashion);
-		   				$(".valuesList").append("<li>"+ cultureValues +"</li>")
-		   				$(".foodList").append("<li>"+ cultureFood +"</li>")
-		   				$(".fashionInfo").append("<li>"+ cultureFashion+"</li>")
-		   			}, error: function(object, error) {
+		   				success: function(country) {
+		   					var cultureId = country.id;
+		   					var culture = country.get("Name")
+		   					var cultureValues = country.get("value");
+		   					var cultureFood = country.get("food");
+		   					var cultureFashion = country.get("fashion");
+		   					console.log(culture);
+		   					console.log(cultureValues);
+		   					console.log(cultureFood);
+		   					console.log(cultureFashion);
+		   					var countrySearched = "Japan"
+							var countrySearchedLowerCased = countrySearched.toLowerCase()
+		   					if (countrySearched == culture) {
+		   						$(".valuesList").append("<li>"+ cultureValues +"</li>")
+		   						$(".foodList").append("<li>"+ cultureFood +"</li>")
+		   						$(".fashionInfo").append("<li>"+ cultureFashion+"</li>")
+		   					} else {
+		   					alert("Sorry no info on your country yet. Please make sure to contrubute.")
+		   					}
+		   				}, error: function(object, error) {
 		   				alert(error)
 		   			}
 		   		});
@@ -107,7 +113,6 @@
 		   }
 
 		})
-
 
 				});
 

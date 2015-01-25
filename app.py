@@ -13,31 +13,9 @@ def index():
 def info():
   return render_template("countryInfo.html")
  
-#@app.route("/submitCultureForm")
-#def submitCultureForm():
- # return render_template("submitCultureForm.html")
-
 @app.route("/cultureform")
 def cultureform():
   return render_template("cultureform.html")
 
-
-
-# @app.route('/builder')
-# def builder():
-#   return render_template(
-#     "builder.html",
-#     saves=get_saved_data(),
-#     options=DEFAULTS
-#   )
-
-
-# @app.route("/save", methods=["POST"])
-# def save():
-#   response = make_response(redirect(url_for("builder")))
-#   data = get_saved_data()
-#   data.update(dict(request.form.items()))
-#   response.set_cookie("character", json.dumps(data))
-#   return response
 
 app.run(debug=True)
