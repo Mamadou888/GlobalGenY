@@ -12,7 +12,7 @@ def index():
 @app.route("/info")
 def info():
   return render_template("info.html")
- 
+
 # @app.route('/builder')
 # def builder():
 #   return render_template(
