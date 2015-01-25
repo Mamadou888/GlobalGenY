@@ -1,5 +1,10 @@
-.special{
-    font-family: inherit !important;
+#title{
+    font-size: 100px;
+}
+
+.fonting{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 #culture{
