@@ -11,7 +11,7 @@ def index():
 
 @app.route("/info")
 def info():
-  return render_template("info.html")
+  return render_template("info.php")
 
  
 @app.route("/submitCultureForm")
