@@ -17,5 +17,9 @@ def info():
 def cultureform():
   	return render_template("cultureform.html")
 
+@app.route("/chat")
+def chat():
+  return render_template("chat.html")
+
 
 app.run(debug=True)

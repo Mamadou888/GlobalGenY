@@ -110,6 +110,11 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
         console.log(theCountry)
     });
 
+    function othername() {
+        var localStorage.test = $("#country").val();
+        tellme();
+    };
+
 
     function tellme() {
     alert("this" + test);
@@ -119,7 +124,7 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
         alert("this" + test);
     };
 
-    var totalCount = 6;
+    var totalCount = 11;
 
     function ChangeIt() {
         var num = Math.ceil( Math.random() * totalCount );

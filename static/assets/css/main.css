@@ -1,3 +1,9 @@
+.headerimage{
+    display: inline;
+    float: left;
+    max-width: 10%;
+
+}
 
 #sub{
     font-size: 25px;

@@ -1,35 +1,31 @@
 {% extends "layout.html" %}
-<style type="text/css">
-	h1{
-		text-align: center;
-		text-transform: capitalize;
-		color: #2E8AE6;
-		font-family: 'Oswald', sans-serif;
-		padding-top: 5px;
-	}
-
-	h3{
-		text-align: center;
-		font-style: oblique;
-		font-size: 130%;
-	}
-
-	p{
-		padding-left: 75px;
-		padding-right:75px;
-		font-size: 120%;
-	}
-
-	body{
-		background-image: url(static/assets/img/2.jpg);
-		background-size: 100%;
-
-	}
-</style>
 
 {% block content %}
 
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <title>INSTANT - Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/assets1/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/assets1/css/style.css" rel="stylesheet">
+
+    <link href="static/assets1/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href="static/assets1/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
 <body>
+
 	<h1 id="theCountry">Name of Country's Culture</h1>
 	<h3>Social Values</h3>
 	<div class="valuesInfo">
@@ -39,34 +35,91 @@
 				<p>Hello these are etiquette details</p>
 			</li>
 		</ul>
+
+
+	<div id="headerwrap">
+       <div class="container">
+         <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+               <a href="chat"><img src="static/assets1/chat.png" id="chat"></a>
+                 <!--<p class="imgDescription">Chat</p>-->
+               <h4>WELCOME TO</h4>
+               <h1> COUNTRY'S CULTURE</h1>
+           </div>
+       </div><!--/row -->
+   </div> <!-- /container -->
+</div><!--/headerwrap -->
+
+<div class="container">
+
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a data-toggle="tab" href="#sectionA">Etiquette</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Food</a></li>
+                <li><a data-toggle="tab" href="#sectionC">Fashion</a></li>
+
+    </ul>
+
+    <div class="tab-content">
+
+        <div id="sectionA" class="tab-pane fade in active">
+            <h3>Etiquette</h3>
+            	<div class="valuesInfo">
+    				<div class="row mt special">
+    					<ul class="valuesList" style="list-style-type: none;">
+    						<li style="list-style-type: none;">
+    							<p class="col-lg-4 centered si">This is an example fact in the etiquette area. This area is where you store facts about the etiquette, values, and customs of a country.</p>
+    						</li>
+    					</ul> 	
+    				</div><!-- /row -->
+   				 </div>
+        </div>
+
+        <div id="sectionB" class="tab-pane fade">
+            <h3>Food</h3>
+            	<div class="detailsOnCountry">
+            		<div class="row mt special">
+						<ul class="foodList" style="list-style-type: none;">
+							<li style="list-style-type: none;">
+								<p class="col-lg-4 centered si">This is an example fact in the food area. This area is where you store facts about the cuisine, comida, gastronomy, and food traditions of a country.</p>
+							</li>
+						</ul>
+					</div>
+        		</div>
+        </div>
+
+        <div id="sectionC" class="tab-pane fade">
+           	<h3>Fashion</h3>
+            	<div class="detailsOnCountry">
+            		<div class="row mt special">
+						<ul class="fashionList" style="list-style-type: none;">
+							<li style="list-style-type: none;">
+								<p class="col-lg-4 centered si">This is an example fact in the fashion area. This area is where you store facts about the clothing, traditional garb, and wearables of a country.</p>
+							</li>	
+						</ul>
+					</div>
+        		</div>
+    	</div>
 	</div>
 
-	<h3>Food</h3>
-	<div class="detailsOnCountry">
-
-		<ul class="foodList">
-			<li>
-				<p>Name of Country has grea food there is more than enough food to satidfy your needs and wants.</p>
-			</li>
-		</ul>
-
 	</div>
 
+	<div id="footerwrap">
+        <div class="container">
+            <div class="row centered">
 
-	<h3>Fashion in Country's Name</h3>
-		<div class="fashionInfo">
+      </div>
+    </div>
 
-			<ul class="fashionList">
-				<li>
-					<p>the fashion details</p>
-				</li>	
-			</ul>
-		</div>		
-			</body>
+			</div>
 
-			{% endblock %}
 
-			{% block javascript %}
+</body>
+
+{% endblock %}
+
+
+
+{% block javascript %}
 			<script type="text/javascript"]>
 
 				$(document).ready(function() {
@@ -95,6 +148,7 @@
 		   					console.log(cultureValues);
 		   					console.log(cultureFood);
 		   					console.log(cultureFashion);
+
 		   					//retrieving the country
 		   					var currentCountry = Parse.Object.extend("countrySearched");
 		   					var retrievedCountry = new Parse.Query(currentCountry);
@@ -123,6 +177,16 @@
 		   							});
 		   						}
 		   					});
+
+		   					var countrySearched = "Japan"
+							var countrySearchedLowerCased = countrySearched.toLowerCase()
+		   					if (countrySearched == culture) {
+		   						$(".valuesList").append("<li><p class='col-lg-4 centered si'>"+ cultureValues +"</p></li>")
+		   						$(".foodList").append("<li><<p class='col-lg-4 centered si'>"+ cultureFood +"</p></li>")
+		   						$(".fashionInfo").append("<li><p class='col-lg-4 centered si'>"+ cultureFashion+"</p></li>")
+		   					} else {
+		   					alert("Sorry no info on your country yet. Please make sure to contribute.")
+		   					}
 		   				}, error: function(object, error) {
 		   				console.log(error)
 		   			}
@@ -134,27 +198,10 @@
 		   }
 
 		})
-
-
-
-
-
-
-
-
-
-
-
 });
 
 </script>
 {% endblock %}
-
-
-
-
-
-
 
 
 
