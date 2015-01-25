@@ -26,7 +26,8 @@
 	<div></div>
 	<h3>Social Etiquette</h3>
 	<h3>Fashion in Country's Name</h3>
-	<p>Fashion in <p>
+	<p>The Islamic dress code is not compulsory, however there is a modest dress code in Dubai. Prohibitions on "indecent clothing" are an aspect of the UAE to which visitors are expected to conform. The UAE has enforced anti-indecency prohibitions in all public places (aside from beaches, clubs and bars). Sleeveless tops and short dresses are prohibited at Dubai's malls. Some expats and tourists disregard the official dress code and laws. The dress code is part of Dubai's criminal law. Expats are prohibited from dressing inappropriately by revealing too much of their skin. Clothes must be in appropriate lengths.<p>
+
 		
 
 
