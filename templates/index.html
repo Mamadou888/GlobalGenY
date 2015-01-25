@@ -70,7 +70,7 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
 
 <input type="text" class="container form-control" placeholder="Country" aria-describedby="sizing-addon1" id="clientsCountry">
 
-<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="learnButton">Learn</a>
+<a type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="learnButton">Learn</a>
 
 <a href="cultureform" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed2" >Contribute</a>
 <h3></h3>
@@ -95,25 +95,21 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
     // };
     Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
     $("#learnButton").click(function () {
-        var currentCountry = Parse.Object.extend("countrySearched");
-        var usersCountry = new currentCountry();
         var theCountry = $("#clientsCountry").val();
-        usersCountry.set({ "country": theCountry});
-        usersCountry.save(null, {
-            success: function(gameScore) {
-                // Now let's update it with some new data. In this case, only cheatMode and score
-                // will get sent to the cloud. playerName hasn't changed.
-                usersCountry.set("country", theCountry);
-                usersCountry.save();
-            }
-        });
-        console.log(theCountry)
+        if (theCountry=="china") {
+            window.location = "/chinaInfo.html";
+        } else if( theCountry == "japan") {
+            window.location = "/countryInfo.html";
+        } else {
+            console.log("Error")
+        }
+        // var currentCountry = Parse.Object.extend("countrySearched");
+        // var usersCountry = new currentCountry();
+
+
+
     });
 
-    // function othername() {
-    //     var localStorage.test = $("#country").val();
-    //     tellme();
-    // };
 
 
     function tellme() {

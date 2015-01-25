@@ -35,7 +35,7 @@
 						<a href="chat"><img src="static/assets1/chat.png" id="chat"></a>
 						<!--<p class="imgDescription">Chat</p>-->
 						<h4>THE CULTURE OF:</h4>
-						<h1>Japan</h1>
+						<h1>China</h1>
 					</div>
 				</div><!--/row -->
 			</div> <!-- /container -->
@@ -112,7 +112,7 @@
 			Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
 
 
-			var Country = Parse.Object.extend("Country");
+			var Country = Parse.Object.extend("Country2");
 			var retrievedData = new Parse.Query(Country);
 			retrievedData.find({
 				success: function(country) {
@@ -135,14 +135,14 @@
 								console.log(cultureFashion);
 
 		   					//retrieving the country
-		   					var currentCountry = Parse.Object.extend("countrySearched");
+		   					var currentCountry = Parse.Object.extend("countrySearched2");
 		   					var retrievedCountry = new Parse.Query(currentCountry);
 		   					retrievedCountry.find({
 		   						success: function(countryWorld) {
 		   							var finalCountry = "";
 		   							latestCountry = countryWorld[0].id
 		   							console.log(latestCountry)
-		   							retrievedCountry.get(String(latestCountry), {
+		   							retrievedCountry.get("china", {
 		   								success: function(latestCountry) {
 		   									var finalCountry = latestCountry.get("country");
 		   									var countrySearched = finalCountry.toLowerCase();

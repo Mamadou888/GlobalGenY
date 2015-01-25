@@ -21,5 +21,8 @@ def cultureform():
 def chat():
   return render_template("chat.html")
 
+@app.route("/chinainfo")
+def toChina():
+  return render_template("chinaInfo.html")
 
 app.run(debug=True)
