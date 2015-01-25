@@ -3,8 +3,7 @@
 
 {% block content %}
 
-<html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,15 +24,7 @@
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
-<script type="text/javascript"> 
-var totalCount = 6;
-function ChangeIt() 
-{
-var num = Math.ceil( Math.random() * totalCount );
-$.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
-
-}
-</script>    
+  
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -43,14 +34,8 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-  </head>
-
-
-  <body>
-    <script type="text/javascript"> 
-ChangeIt();
-</script> 
-
+</head>
+<body>
     <div class="container">
 
 		<div class="row centered">
@@ -64,16 +49,37 @@ ChangeIt();
     <div class="container">
     	<div class="row centered">
     			<p class="fonting">Come learn about other's cultures today.</p>
+
+      <div class="row centered">
+         <div class="col-lg-8 col-lg-offset-2 w">
+            <br>
+            <h1 class="fonting" id="title">GlobalGenY</h1>
+
         </div>
     </div>
+</div><!-- /.container -->
+
+<div class="container">
+   <div class="row w centered">
+      <div class="col-lg-6 col-lg-offset-3">
+         <p class="fonting">Come learn about other's cultures today.</p>
+     </div>
+ </div>
+</div>
+
 
 
     <div class="container input-group input-group-lg">
   <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1" id="changed">
+
+<div class="container input-group input-group-lg" id="changed">
+  <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1">
+
 </div>
 <a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="changed1">Learn</a>
 
 <a href="cultureform" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1" >Contribute</a>
+</body>
 
 {% endblock %},
 
@@ -91,11 +97,22 @@ ChangeIt();
         tellme();
     };
 
+
     function tellme() {
     alert("this" + test);
     };
 
-</script>
+    function tellme() {
+        alert("this" + test);
+    };
+
+    var totalCount = 6;
+
+    function ChangeIt() {
+        var num = Math.ceil( Math.random() * totalCount );
+        $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
+    };
+</script> 
 {% endblock %}
 
 
