@@ -30,23 +30,14 @@
 
 			}
 
-		div.sub{
-			padding-top: 10px;
-			font-size: 120%;
-			padding-left: 75px;
-			padding-right:75px;
-
-		}
-
 		</style>
 </head>
 <body>
 	<h1>Name of Country's Culture</h1>
-	<div class="sub"></div>
+	<div></div>
 	<h3>Food</h3>
 	<p>Name of Country has grea food there is more than enough food to satidfy your needs and wants.</p>
-	</div>
-	<div class="sub">
+	<div></div>
 	<h3>Social Etiquette</h3>
 	Status is important and must be recognized by using the correct title when addressing someone. It is customary to use Sheikh (chief) (or Sheikha for a woman), Sayed (Mr.), Sayeda (Mrs.), etc. Arabs generally address people by their first names, so John Smith will be addressed as Mr. John.
 
@@ -61,11 +52,9 @@ Do not be surprised if your hand is held while you are led somewhere. Holding ha
 Many people in the Middle East claim a more modest area of personal space than is usual in the West. Accordingly, it can seem rude for an individual to step away when another individual is stepping closer.
 
 Special respect is paid to older people in many circumstances. This can include standing when older people enter a room, always greeting older people first, standing when speaking to one’s elders, and serving older people first at a meal.
-	</div>
-	<div class="sub">
+
 	<h3>Fashion in Country's Name</h3>
 	<p>The Islamic dress code is not compulsory, however there is a modest dress code in Dubai. Prohibitions on "indecent clothing" are an aspect of the UAE to which visitors are expected to conform. The UAE has enforced anti-indecency prohibitions in all public places (aside from beaches, clubs and bars). Sleeveless tops and short dresses are prohibited at Dubai's malls. Some expats and tourists disregard the official dress code and laws. The dress code is part of Dubai's criminal law. Expats are prohibited from dressing inappropriately by revealing too much of their skin. Clothes must be in appropriate lengths.<p>
-	</div>
 
 		
 
