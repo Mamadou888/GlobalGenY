@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return render_template("index.html", saves=get_saved_data())
+  return render_template("index.html")
 
  
 # @app.route('/builder')
@@ -29,4 +29,4 @@ def index():
 #   response.set_cookie("character", json.dumps(data))
 #   return response
 
-app.run(debug=True, host="0.0.0.0", port=8000)
+app.run(debug=True)
