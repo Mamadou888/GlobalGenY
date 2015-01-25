@@ -1,7 +1,19 @@
-.headerimage{
+.left{
+    display: inline-block;
+    float: left;
     width: 50%;
-    height: 20%;
+    margin: 0px;
+
 }
+
+.right{
+        display: inline-block;
+    float: right;
+    width: 50%;
+    margin: 0px;
+}
+
+
 
 #sub{
     font-size: 25px;
