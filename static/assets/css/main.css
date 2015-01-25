@@ -1,3 +1,7 @@
+.special{
+    font-family: inherit !important;
+}
+
 #culture{
     width: px !important;
     border: 0px !important;
@@ -12,7 +16,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
-
+    text-align: center;
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }

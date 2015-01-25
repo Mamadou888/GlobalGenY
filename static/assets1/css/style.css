@@ -242,4 +242,24 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 80px;
     font-family: inherit;
     color: white;
+    cursor:
+}
+
+.myclass{
+	max-width: 555px;
+}
+
+textarea {
+  margin:0px 0px;
+  padding:5px;
+  height:16px;
+  line-height:16px;
+  width:96%;
+  display:block;
+  margin:0px auto;    
+}
+
+.question{
+	text-align: center;
+	margin-top: 40px;	 	 		  		 	
 }

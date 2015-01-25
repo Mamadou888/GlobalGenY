@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,12 +28,20 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+ 	<script>
+ 	function expandTextarea(id) {
+    	var $element = $('.myclass').get(0);  
+    	$element.addEventListener('keyup', function() {
+        
+        this.style.overflow = 'hidden';
+        this.style.height = 0;
+        this.style.height = this.scrollHeight + 'px';
+    	}, false);
+	}
+	</script>
   </head>
 
   <body>
-
-    <!-- Static navbar -->
-
 
 	<div id="headerwrap">
 	    <div class="container">
@@ -40,14 +51,31 @@
 					<input type="text" class="form-control container" id="culture">
 					<h4>WELCOME TO MY CULTURE</h4>
 				</div>
-			</div><! --/row -->
+			</div><!--/row -->
 	    </div> <!-- /container -->
-	</div><! --/headerwrap -->
+	</div><!--/headerwrap -->
 	
-	<section id="works"></section>
 	<div class="container">
-		<div class="row centered mt mb">
-			<h1>My Portfolio</h1>
+
+            <h4 class="question">WHAT DOES YOUR CULTURE VALUE?</h4>
+            <textarea id="cultureValues" class="form-control formsize myclass"></textarea>
+            	<script>
+				expandTextarea('cultureValues');
+ 				</script>
+
+        	 <h4 class="question">WHAT DO YOU GUY'S EAT?</h4>
+            <textarea id="cultureFood" class="form-control formsize myclass"></textarea>
+            	<script>
+				expandTextarea('cultureFood');
+ 				</script>
+
+ 			<h4 class="question">WHAT ARE THE CURRENT FASHION TRENDS?</h4>
+            <textarea id="cultureFashion" class="form-control formsize myclass"></textarea>
+            	<script>
+				expandTextarea('cultureFashion');
+ 				</script>
+
+ 	</div>
 			
 			<!--<div class="col-lg-4 col-md-4 col-sm-4 gallery">
 				<a href="work.html"><img src="static/assets1//img/portfolio/folio01.png" class="img-responsive"></a>
@@ -67,8 +95,8 @@
 			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
 				<a href="work.html"><img src="assets/img/portfolio/folio06.png" class="img-responsive"></a>
 			</div>-->
-		</div><! --/row -->
-	</div><! --/container -->
+		</div><!--/row -->
+	</div><!--/container -->
 	
 	<div id="social">
 		<div class="container">
@@ -122,3 +150,33 @@
     <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+var theCountry = Parse.Object.extend("Country");
+
+
+$("#submitData").click( function() {
+    var culture = $("#culture").val();
+    var cultureValues = $("#cultureValues").val();
+    var cultureFood = $("#cultureFood").val();
+    var cultureFashion = $("#cultureFashion").val();
+    
+    var citizenContribution = new theCountry();
+
+    citizenContribution.save({Name:culture, value: cultureValues, food:cultureFood, fashion:cultureFashion});
+    });
+    alert("Submited!");
+});
+console.log(culture);
+console.log(cultureValues);
+console.log(cultureFashion);
+console.log(cultureFood);
+</script>
+{% endblock %}
