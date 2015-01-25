@@ -39,65 +39,53 @@
    </div> <!-- /container -->
 </div><!--/headerwrap -->
 
-<section id="etiquette" name="etiquette"></section>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 name">
-					<p>ETIQUETTE & CUSTOMS</p>
-				</div><! --/col-lg-4-->
-				<div class="col-lg-8 name-desc">
-					
-					<div class="col-md-6">
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-						<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-					</div>
-					<div class="col-md-6">
-						<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-						<p> Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. </p>
-					</div>
-					
-				</div><! --/col-lg-8-->
-		
-			</div><!-- /row -->
-		</div><!-- /container -->
-
 <div class="container">
 
-	<h3>Values and Etiquette</h3>
-	<div class="valuesInfo">
 
-		<ul class="valuesList">
-			<li>
-				<p>Hello these are etiquette details</p>
-			</li>
-		</ul>
-	</div>
+<div class="bs-example">
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a data-toggle="tab" href="#sectionA">Etiquette</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Food</a></li>
+                <li><a data-toggle="tab" href="#sectionC">Fashion</a></li>
 
-		<div class="sep about" data-stellar-background-ratio="0.5"></div>
+    </ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+            <h3>Etiquette</h3>
+            <div class="valuesInfo">
+    	<div class="row mt special">
+    		<ul class="valuesList" style="list-style-type: none;">
+    		<li style="list-style-type: none;">
+    			<p class="col-lg-4 centered si"></p>
+    		</li>
+    		</ul> 	
+    	</div><!-- /row -->
+    </div><!-- /container -->
+        </div>
+        <div id="sectionB" class="tab-pane fade">
+            <div class="detailsOnCountry">
+				            <h3>Food</h3>
+				<ul class="foodList">
+					<li>
+						<p>Name of Country has grea food there is more than enough food to satidfy your needs and wants.</p>
+					</li>
+				</ul>
+			</div>
+        </div>
+        <div id="sectionC" class="tab-pane fade">
+            <div class="detailsOnCountry">
+				            <h3>Fashion</h3>
 
-
-	<h3>Food</h3>
-	<div class="detailsOnCountry">
-
-		<ul class="foodList">
-			<li>
-				<p>Name of Country has grea food there is more than enough food to satidfy your needs and wants.</p>
-			</li>
-		</ul>
-
-	</div>
-
-
-	<h3>Fashion in Country's Name</h3>
-		<div class="fashionInfo">
-
-			<ul class="fashionList">
+				<ul class="fashionList">
 				<li>
 					<p>the fashion details</p>
 				</li>	
 			</ul>
-		</div>		
-</div><!--/container -->
+			</div>
+        </div>
+    </div>
+</div>
+
 	
 	<div id="footerwrap">
 			
@@ -144,11 +132,11 @@
 		   					var countrySearched = "Japan"
 							var countrySearchedLowerCased = countrySearched.toLowerCase()
 		   					if (countrySearched == culture) {
-		   						$(".valuesList").append("<li>"+ cultureValues +"</li>")
-		   						$(".foodList").append("<li>"+ cultureFood +"</li>")
-		   						$(".fashionInfo").append("<li>"+ cultureFashion+"</li>")
+		   						$(".valuesList").append("<li><p class='col-lg-4 centered si'>"+ cultureValues +"</p></li>")
+		   						$(".foodList").append("<li><<p class='col-lg-4 centered si'>"+ cultureFood +"</p></li>")
+		   						$(".fashionInfo").append("<li><p class='col-lg-4 centered si'>"+ cultureFashion+"</p></li>")
 		   					} else {
-		   					alert("Sorry no info on your country yet. Please make sure to contrubute.")
+		   					alert("Sorry no info on your country yet. Please make sure to contribute.")
 		   					}
 		   				}, error: function(object, error) {
 		   				alert(error)
