@@ -56,6 +56,7 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
+
  hr {
     display: block;
     height: 1px;
@@ -80,4 +81,16 @@ h1 {
 .w i {
 	font-size: 26px;
 	padding: 12px;
+}
+
+#changed {
+    width: 300px !important;
+    margin-top: 25px;
+    border-radius: 25px !important;
+}
+
+#changed1 {
+    width: 275px !important;
+    margin-top: 20px;
+    border-radius: 25px !important;
 }
