@@ -8,21 +8,21 @@
         <form>
         <div class="form-group">
             <label for="exampleInputEmail1">Country of Review</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <input type="text" class="form-control" id="culture" placeholder="" style="height:200px;width:600px">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="exampleInputPassword1">What does your culture value?</label>
+            <input type="text" class="form-control" id="cultureValues" placeholder="" style="height:200px;width:600px">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">W</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label for="exampleInputEmail1">How do you guy's eat?</label>
+            <input type="text" class="form-control" id="cultureFood" placeholder="" style="height:200px;width:600px">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1"</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            <label for="exampleInputEmail1">What's the current fashion trend</label>
+            <input type="text" class="form-control" id="cultureFashion" placeholder="" style="height:200px;width:600px">
         </div>        
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
         </div>        
@@ -45,11 +45,50 @@
         <div class="checkbox">
             <label>
               <input type="checkbox"> Check me out
-        </label>
-        </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+        </label> -->
+        <button id="submitData" type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>    
 </div>
 
 {% endblock %}
+
+{% block javascript %}
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+
+Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+
+var culture = $(culture).val();
+var cultureValues = $(cultureValues)
+var cultureFood = $(cultureFood).val();
+var cultureFashion = $(cultureFashion).val();
+var theCountry = Parse.Object.extend("Japan");
+
+
+console.log(culture)
+
+$("#submitData").click( function() {
+    var citizenContribution = new theCountry();
+
+    citizenContribution.save({value: "family",food: "sushiL",fashion: "weird hats"});
+    });
+});
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
