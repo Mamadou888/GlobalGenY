@@ -23,6 +23,7 @@
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript"> 
 var totalCount = 6;
@@ -61,16 +62,14 @@ ChangeIt();
     </div><!-- /.container -->
 
     <div class="container">
-    	<div class="row w centered">
-    		<div class="col-lg-6 col-lg-offset-3">
+    	<div class="row centered">
     			<p class="fonting">Come learn about other's cultures today.</p>
-    		</div>
         </div>
     </div>
 
 
-    <div class="container input-group input-group-lg" id="changed">
-  <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1">
+    <div class="container input-group input-group-lg">
+  <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1" id="changed">
 </div>
 <a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="changed1">Learn</a>
 
@@ -88,13 +87,13 @@ ChangeIt();
     $.backstretch("static/assets/img/1.jpg", {speed: 500});
 
     function othername() {
-    var localStorage.test = document.getElementById("country").value;
-    tellme();
-    }
+        var localStorage.test = document.getElementById("country").value;
+        tellme();
+    };
 
-    function tellme(){
+    function tellme() {
     alert("this" + test);
-    }};
+    };
 
 </script>
 {% endblock %}

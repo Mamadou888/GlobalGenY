@@ -20,6 +20,8 @@
     <!-- Custom styles for this template -->
     <link href="static/assets1/css/style.css" rel="stylesheet">
     <link href="static/assets1/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href="static/assets1/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -45,6 +47,7 @@
 $(document).ready(function() {
 Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
 var theCountry = Parse.Object.extend("Country");
+ $("input:text:visible:first").focus();
 }
 
 
@@ -69,7 +72,6 @@ console.log(cultureFashion);
 console.log(cultureFood);
 }*/
 </script>
-	</script>
   </head>
 
   <body>
@@ -133,7 +135,8 @@ console.log(cultureFood);
 	<div id="footerwrap">
 		<div class="container">
 			<div class="row centered">
-				<button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit" onclick="trying();">Contribute</button>
+				<button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit">Contribute to Society</button>
+
 			</div>
 		</div>
 	</div>
@@ -175,6 +178,11 @@ console.log(culture);
 console.log(cultureValues);
 console.log(cultureFashion);
 console.log(cultureFood);
+<<<<<<< HEAD
+
+});
+=======
 }*/
+>>>>>>> FETCH_HEAD
 </script>
 {% endblock %}

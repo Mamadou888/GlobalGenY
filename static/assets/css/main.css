@@ -1,10 +1,12 @@
+
 #title{
     font-size: 100px;
 }
 
 .fonting{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+font-family: 'Poiret One', cursive;
+color: #E0E0E0 ;
+font-weight: bold;
 }
 
 #culture{
@@ -101,13 +103,16 @@ h1 {
 }
 
 #changed {
-    width: 300px !important;
+    width: 450px !important;
+    height: 70px !important;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
     margin-top: 25px;
     border-radius: 25px !important;
 }
 
 #changed1 {
-    width: 275px !important;
+    width: 450px !important;
     margin-top: 20px;
     border-radius: 25px !important;
 }
