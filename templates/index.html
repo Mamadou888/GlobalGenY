@@ -24,7 +24,15 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-    
+<script type="text/javascript"> 
+var totalCount = 6;
+function ChangeIt() 
+{
+var num = Math.ceil( Math.random() * totalCount );
+$.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
+
+}
+</script>    
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -38,12 +46,15 @@
 
 
   <body>
+    <script type="text/javascript"> 
+ChangeIt();
+</script> 
 
     <div class="container">
 
 		<div class="row centered">
 			<div class="col-lg-8 col-lg-offset-2 w">
-
+                <br>
                 <h1>GlobalGenY</h1>
 			</div>
 		</div>
@@ -56,13 +67,7 @@
     		<div class="col-lg-6 col-lg-offset-3">
     			<p>Come learn about other's cultures today.</p>
     		</div>
-            <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1">
 </div>
-
-<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Learn</a>
-
-
-<a href="submitCultureForm" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Contribute</a>
 
     	</div>
     </div>
@@ -75,7 +80,7 @@
 <a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Learn</a>
 
 
-<a href="submitCultureForm" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Contribute</a>
+<a href="submitCultureForm" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1" >Contribute</a>
 
 {% endblock %},
 
@@ -86,30 +91,46 @@
       container: "body"
     })
 </script>
-
-
-<style> 
+ 
 body {
     width: 100px;
     height: 100px;
     background-image: url(static/assets/img/nyc1.jpg);
-    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera */
+    -webkit-animation: myfirst 5s; /* Chrome, Safari, Opera 
     animation: myfirst 5s;
 }
 
-/* Chrome, Safari, Opera */
+Chrome, Safari, Opera 
 @-webkit-keyframes myfirst {
     from {background-image: url(static/assets/img/nyc1.jpg);}
     to {background-image: url(static/assets/img/mexico_city.jpg);}
 }
 
-/* Standard syntax */
+ Standard syntax 
 @keyframes myfirst {
     from {background: url(static/assets/img/nyc1.jpg);}
     to {background: url(static/assets/img/mexico_city.jpg);}
 }
-</style>
+</style>-->
 
+    <!--<script>
+        $.backstretch("static/assets/img/1.jpg", {speed: 500});
+    </script>-->
+
+    <script>
+    function othername() {
+    var localStorage.test = document.getElementById("country").value;
+    tellme();
+    }
+
+    function tellme(){}
+    alert("this" + test);
+    }
+}
+    </script>
 {% endblock %}
 
 
+=======
+    {% endblock %}
+>>>>>>> FETCH_HEAD
