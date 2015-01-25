@@ -31,24 +31,97 @@
 
 <body>
 	<h1>Name of Country's Culture</h1>
+	<h3>Social Values</h3>
+	<div class="valuesInfo">
+
+		<ul class="valuesList">
+			<li>
+				<p>Hello these are etiquette details</p>
+			</li>
+		</ul>
+	</div>
+
+	<h3>Food</h3>
 	<div class="detailsOnCountry">
-		<h3>Food</h3>
-		<div>
-			<p>Name of Country has grea food there is more than enough food to satidfy your needs and wants.</p>
-		</div>
 
-		<h3>Social Etiquette</h3>
-		<div class="etiquetteInfo">
-			<p>Hello these are etiquette details</p>
-		</div>
-		<h3>Fashion in Country's Name</h3>
+		<ul class="foodList">
+			<li>
+				<p>Name of Country has grea food there is more than enough food to satidfy your needs and wants.</p>
+			</li>
+		</ul>
+
+	</div>
+
+
+	<h3>Fashion in Country's Name</h3>
 		<div class="fashionInfo">
-			<p>the fashion details<p>
-			</div>
-		</div>
-	</body>
-	</html>
+
+			<ul class="fashionList">
+				<li>
+					<p>the fashion details</p>
+				</li>	
+			</ul>
+		</div>		
+			</body>
+
+			{% endblock %}
+
+			{% block javascript %}
+			<script type="text/javascript"]>
+
+				$(document).ready(function() {
+
+					Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+
+					var Country = Parse.Object.extend("Country");
+					var retrievedData = new Parse.Query(Country);
+					retrievedData.find({
+						success: function(country) {
+							var i = 0, objId = [];
+
+		while(i < country.length){
+			var obj = country[i];
+		   		objId = obj.id;
+		   		i++;
+		   		retrievedData.get(objId ,{
+		   			success: function(country) {
+		   				var cultureId = country.id;
+		   				var culture = country.get("Name")
+		   				var cultureValues = country.get("value");
+		   				var cultureFood = country.get("food");
+		   				var cultureFashion = country.get("fashion");
+		   				console.log(culture);
+		   				console.log(cultureValues);
+		   				console.log(cultureFood);
+		   				console.log(cultureFashion);
+		   				$(".valuesList").append("<li>"+ cultureValues +"</li>")
+		   				$(".foodList").append("<li>"+ cultureFood +"</li>")
+		   				$(".fashionInfo").append("<li>"+ cultureFashion+"</li>")
+		   			}, error: function(object, error) {
+		   				alert(error)
+		   			}
+		   		});
+		   	}	i = 0;
+		   }, error: function(error) {
+		   	alert("Error");
+		   }
+
+		})
 
 
-	{% endblock %}
+				});
+
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
 
