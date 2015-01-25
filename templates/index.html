@@ -70,7 +70,7 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
 
 <input type="text" class="container form-control" placeholder="Country" aria-describedby="sizing-addon1" id="clientsCountry">
 
-<a type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="learnButton">Learn</a>
+<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="learnButton">Learn</a>
 
 <a href="cultureform" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed2" >Contribute</a>
 <h3></h3>
@@ -99,6 +99,7 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
         if (theCountry=="china") {
             window.location = "/chinaInfo.html";
         } else if( theCountry == "japan") {
+            
             window.location = "/countryInfo.html";
         } else {
             console.log("Error")
