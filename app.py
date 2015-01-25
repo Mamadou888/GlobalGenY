@@ -12,11 +12,14 @@ def index():
 @app.route("/info")
 def info():
   return render_template("info.php")
-
  
-@app.route("/submitCultureForm")
-def submitCultureForm():
-  return render_template("submitCultureForm.html")
+#@app.route("/submitCultureForm")
+#def submitCultureForm():
+ # return render_template("submitCultureForm.html")
+
+@app.route("/cultureform")
+def cultureform():
+  return render_template("cultureform.html")
 
 
 
