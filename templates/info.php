@@ -13,6 +13,18 @@
 	<h3>Social Etiquette</h3>
 	<h3>Fashion in Country's Name</h3>
 	<p>Fashion in <p>
+		<style type="text/css">
+		h1{
+			text-align: center;
+			text-transform: capitalize;
+			color: #2E8AE6;
+		}
+
+		body{
+			background-image: url(static/assets/img/nyc1.jpg);
+			background-size:  100%;
+		}
+		</style>
 
 
 
