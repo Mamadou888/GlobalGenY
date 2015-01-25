@@ -13,26 +13,26 @@
       header {color: rgb(130, 224, 255);}
       h1 { text-align: center; padding: 14px}
       hr { border-width: 15 em;}
-      #list { width: 960px; color: navy; background-color: orange; border: 2px solid darkblue; padding: 5px; margin-left: 160px;}
-      form { width: 960px; margin-left: 160px;}
+      #list { width: 960px; color: navy; background-color: orange; border: 2px solid darkblue; padding: 5px; position: absolute;left: 50%;margin-left: -480px;}
+      form { width: 960px; margin-left: 160px;position: absolute;left: 50%;margin-left: -480px;}
     </style>
+              <link href="chat.css" rel="stylesheet">
+
   </head>
   <body>
     <!-- Header -->
 
-    <header>
-        <h1><strong><tt><i> Global Osmosis <i></strong></tt></h1>
-        <hr style="border: 1px dashed #000;" />
-    </header>
+    <img src="chat.jpg" class="header">
+
 
     <!-- Body for the text -->
 
-    <div id = "list">
-        <ul id="messages"></ul>
+    <div id = "list" class="top" align="middle">
+        <ul id="messages" class="top"></ul>
     </div>
     <div id = "bot">
-        <form action="">
-          <input id="m" autocomplete="off" /><button>Send</button>
+        <form action="" id="bot"> 
+          <input id="m" autocomplete="off" align="middle"/><button>Send</button>
         </form>
     </div>
 
