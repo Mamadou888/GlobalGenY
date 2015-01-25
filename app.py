@@ -1,7 +1,7 @@
 import json
 
 from flask import (Flask, render_template, redirect, url_for, request, make_response)
-
+# from flask_bootstrap import Bootstrap
 # from options import DEFAULTS
 
 app = Flask(__name__)
