@@ -18,6 +18,8 @@ def info():
 def submitCultureForm():
   return render_template("submitCultureForm.html")
 
+
+
 # @app.route('/builder')
 # def builder():
 #   return render_template(
