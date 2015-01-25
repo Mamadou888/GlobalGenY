@@ -1,1 +1,7 @@
-hi
+<script>
+	var test = document.location.href;
+	var i = test.indexOf("?");
+		alert("hi" + i);
+	test = test.substring(i+1,test.length);
+	alert(test);
+</script>

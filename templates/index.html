@@ -1,3 +1,5 @@
+
+
 {% extends "layout.html" %}
 
 
@@ -5,6 +7,13 @@
 
 <html lang="en">
   <head>
+
+<style type="text/css">
+body{
+background: url(images/<?php echo $selectedBg; ?>) no-repeat;
+}
+</style>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,24 +65,16 @@
     		<div class="col-lg-6 col-lg-offset-3">
     			<p>Come learn about other's cultures today.</p>
     		</div>
-            <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1">
-</div>
-
-<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Learn</a>
-
-
-<a href="submitCultureForm" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Contribute</a>
 
     	</div>
     </div>
 
 
     <div class="container input-group input-group-lg" id="changed">
-  <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1">
+  <input type="text" class="form-control" placeholder="Country" aria-describedby="sizing-addon1" id="country">
 </div>
 
-<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Learn</a>
-
+<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1" onclick="othername();">Learn</a>
 
 <a href="contry.php" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed1">Contribute</a>
 
@@ -94,7 +95,7 @@
 
     
     <script type="text/javascript" src="static/assets/js/jquery.backstretch.min.js"></script>
-    <style> 
+    <!--<style> 
 body {
     width: 100px;
     height: 100px;
@@ -114,12 +115,24 @@ body {
     from {background: url(static/assets/img/nyc1.jpg);}
     to {background: url(static/assets/img/mexico_city.jpg);}
 }
-</style>
+</style>-->
+
+    <script>
+        $.backstretch("static/assets/img/nyc1.jpg", {speed: 500});
+    </script>
+
+    <script>
+    function othername() {
+    var localStorage.test = document.getElementById("country").value;
+    tellme();
+    }
+
+    function tellme(){}
+    alert("this" + test);
+    }
+}
+    </script>
 
     {% endblock %}
-=======
-    $.backstretch("static/assets/img/nyc1.jpg", {speed: 500});
-</script>
-{% endblock %}
->>>>>>> Stashed changes
+
 
