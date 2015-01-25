@@ -8,10 +8,13 @@
 			text-align: center;
 			text-transform: capitalize;
 			color: #2E8AE6;
+			font-family: 'Oswald', sans-serif;
+			padding-top: 5px;
 		}
 
 		body{
-			background-image: url(static/assets/img/nyc1.jpg);
+			background-image: url(static/assets/img/2.jpg);
+			background-size: 100%;
 			}
 
 		</style>
