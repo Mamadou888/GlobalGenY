@@ -263,3 +263,7 @@ textarea {
 	text-align: center;
 	margin-top: 40px;	 	 		  		 	
 }
+
+#submitData{
+	width: 300px;
+}
