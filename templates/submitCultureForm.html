@@ -60,22 +60,25 @@
 $( document ).ready(function() {
 
 Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+var theCountry = Parse.Object.extend("Country");
 
-var culture = $(culture).val();
-var cultureValues = $(cultureValues)
-var cultureFood = $(cultureFood).val();
-var cultureFashion = $(cultureFashion).val();
-var theCountry = Parse.Object.extend("Japan");
-
-
-console.log(culture)
 
 $("#submitData").click( function() {
+    var culture = $("#culture").val();
+    var cultureValues = $("#cultureValues").val();
+    var cultureFood = $("#cultureFood").val();
+    var cultureFashion = $("#cultureFashion").val();
+    
     var citizenContribution = new theCountry();
 
-    citizenContribution.save({value: "family",food: "sushiL",fashion: "weird hats"});
+    citizenContribution.save({Name:culture, value: cultureValues, food:cultureFood, fashion:cultureFashion});
     });
+    alert("Submited!");
 });
+console.log(culture);
+console.log(cultureValues);
+console.log(cultureFashion);
+console.log(cultureFood);
 </script>
 {% endblock %}
 
