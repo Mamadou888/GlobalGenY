@@ -11,11 +11,11 @@ def index():
 
 @app.route("/info")
 def info():
-  return render_template("countryInfo.html")
+ 	return render_template("countryInfo.html")
  
 @app.route("/cultureform")
 def cultureform():
-  return render_template("cultureform.html")
+  	return render_template("cultureform.html")
 
 
 app.run(debug=True)

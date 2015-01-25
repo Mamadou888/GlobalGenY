@@ -68,27 +68,48 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
      </div>
  </div>
 
+<input type="text" class="container form-control" placeholder="Country" aria-describedby="sizing-addon1" id="clientsCountry">
 
-<input type="text" class="container form-control" placeholder="Country" aria-describedby="sizing-addon1" id="changed">
-<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="changed1">Learn</a>
+<a href="info" type="button" class="container btn btn-default navbar-btn margin center-block" type="submit" id="learnButton">Learn</a>
 
 <a href="cultureform" type="button" class="container btn btn-default navbar-btn margin center-block" id="changed2" >Contribute</a>
-
+<h3></h3>
 {% endblock %},
 
 {% block javascript %}
 <script type="text/javascript">
+    $(document).ready(function() {
+
+
     $('.tooltip-demo').tooltip({
       selector: "[data-toggle=tooltip]",
       container: "body"
     });
 
     $.backstretch("static/assets/img/1.jpg", {speed: 500});
+    
 
-    function othername() {
-        var localStorage.test = document.getElementById("country").value;
-        tellme();
-    };
+    // function othername() {
+    //     var localStorage.test = document.getElementById("country").value;
+    //     tellme();
+    // };
+    Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+    $("#learnButton").click(function () {
+        var currentCountry = Parse.Object.extend("countrySearched");
+        var usersCountry = new currentCountry();
+        var theCountry = $("#clientsCountry").val();
+        usersCountry.set({ "country": theCountry});
+        usersCountry.save(null, {
+            success: function(gameScore) {
+                // Now let's update it with some new data. In this case, only cheatMode and score
+                // will get sent to the cloud. playerName hasn't changed.
+                usersCountry.set("country", theCountry);
+                usersCountry.save();
+            }
+        });
+        console.log(theCountry)
+    });
+
 
     function tellme() {
     alert("this" + test);
@@ -104,6 +125,8 @@ $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
         var num = Math.ceil( Math.random() * totalCount );
         $.backstretch("static/assets/img/"+num+".jpg", {speed: 500});
     };
+
+    });
 </script> 
 {% endblock %}
 

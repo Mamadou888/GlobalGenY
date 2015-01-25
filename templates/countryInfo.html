@@ -30,7 +30,7 @@
 {% block content %}
 
 <body>
-	<h1>Name of Country's Culture</h1>
+	<h1 id="theCountry">Name of Country's Culture</h1>
 	<h3>Social Values</h3>
 	<div class="valuesInfo">
 
@@ -73,6 +73,7 @@
 
 					Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
 
+
 					var Country = Parse.Object.extend("Country");
 					var retrievedData = new Parse.Query(Country);
 					retrievedData.find({
@@ -94,27 +95,57 @@
 		   					console.log(cultureValues);
 		   					console.log(cultureFood);
 		   					console.log(cultureFashion);
-		   					var countrySearched = "Japan"
-							var countrySearchedLowerCased = countrySearched.toLowerCase()
-		   					if (countrySearched == culture) {
-		   						$(".valuesList").append("<li>"+ cultureValues +"</li>")
-		   						$(".foodList").append("<li>"+ cultureFood +"</li>")
-		   						$(".fashionInfo").append("<li>"+ cultureFashion+"</li>")
-		   					} else {
-		   					alert("Sorry no info on your country yet. Please make sure to contrubute.")
-		   					}
+		   					//retrieving the country
+		   					var currentCountry = Parse.Object.extend("countrySearched");
+		   					var retrievedCountry = new Parse.Query(currentCountry);
+		   					retrievedCountry.find({
+			   					success: function(countryWorld) {
+			   						var finalCountry = "";
+			   						latestCountry = countryWorld[0].id
+			   						console.log(latestCountry)
+			   				 		retrievedCountry.get(String(latestCountry), {
+		 								success: function(latestCountry) {
+		 									var finalCountry = latestCountry.get("country");
+		 									var countrySearched = finalCountry.toLowerCase();
+				   								if (countrySearched == culture) {
+				   									$("#theCountry").text("Country: "+countrySearched);
+				   									$(".valuesList").append("<li>"+ cultureValues +"</li>")
+				   									$(".foodList").append("<li>"+ cultureFood +"</li>")
+				   									$(".fashionInfo").append("<li>"+ cultureFashion+"</li>")
+				   								} else if (countrySearched != culture) {
+				   									$("#theCountry").text("Sorry no details on this country yet :( " + "Perhaps you shouls others to 			contribute at Contribute")
+				   									console.log("Sorry no info on your country yet. Please make sure to contrubute.")
+				   								}
+		 									}, 
+		 								error: function(object, error) {
+			   								console.log(error);
+			   							}
+		   							});
+		   						}
+		   					});
 		   				}, error: function(object, error) {
-		   				alert(error)
+		   				console.log(error)
 		   			}
 		   		});
 		   	}	i = 0;
 		   }, error: function(error) {
-		   	alert("Error");
+		   	console.log("Error");
+
 		   }
 
 		})
 
-				});
+
+
+
+
+
+
+
+
+
+
+});
 
 </script>
 {% endblock %}
