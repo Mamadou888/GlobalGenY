@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="assets/ico/favicon.ico">
-	<title>INSTANT - Bootstrap Theme</title>
+	<title></title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="static/assets1/css/bootstrap.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 						<a href="chat"><img src="static/assets1/chat.png" id="chat"></a>
 						<!--<p class="imgDescription">Chat</p>-->
 						<h4>THE CULTURE OF:</h4>
-						<h1>MEXICO</h1>
+						<h1>{{ users_country }}</h1>
 					</div>
 				</div><!--/row -->
 			</div> <!-- /container -->
@@ -139,27 +139,9 @@
 		   					var retrievedCountry = new Parse.Query(currentCountry);
 		   					retrievedCountry.find({
 		   						success: function(countryWorld) {
-		   							var finalCountry = "";
-		   							latestCountry = countryWorld[0].id
-		   							console.log(latestCountry)
-		   							retrievedCountry.get(String(latestCountry), {
-		   								success: function(latestCountry) {
-		   									var finalCountry = latestCountry.get("country");
-		   									var countrySearched = finalCountry.toLowerCase();
-		   									if (countrySearched == culture) {
-		   										$("#theCountry").text("Country: "+countrySearched);
-		   										$(".valuesList").append("<li><p class='col-lg-4 centered si'>"+ cultureValues +"</p></li>")
-		   										$(".foodList").append("<li><p class='col-lg-4 centered si'>"+ cultureFood +"</p></li>")
-		   										$(".fashionList").append("<li><p class='col-lg-4 centered si'>"+ cultureFashion+"</p></li>")
-		   									} else if (countrySearched != culture) {
-		   										$("#theCountry").text("Sorry no details on this country yet :( " + "Perhaps you shouls others to contribute at Contribute")
-		   											console.log("Sorry no info on your country yet. Please make sure to contrubute.")
-		   										}
-		   									}, 
-		   									error: function(object, error) {
-		   										console.log(error);
-		   									}
-		   								});
+		   							$(".valuesList").append("<li><p class='col-lg-4 centered si'>"+ cultureValues +"</p></li>")
+		   							$(".foodList").append("<li><p class='col-lg-4 centered si'>"+ cultureFood +"</p></li>")
+		   							$(".fashionList").append("<li><p class='col-lg-4 centered si'>"+ cultureFashion+"</p></li>")
 									}
 								});
 							}
@@ -167,7 +149,9 @@
 					}	i = 0;
 				}, error: function(error) {
 				console.log("Error");
-
+				$("#theCountry").text("Sorry no details on this country yet :you should ask others to contribute at Contribute")
+				console.log("Sorry no info on your country yet. Please make sure to contrubute.")
+			
 			}
 
 		})

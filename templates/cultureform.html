@@ -27,45 +27,45 @@
 
 
 	<div id="headerwrap">
-       <div class="container">
-         <div class="row">
-            <div class="col-lg-6 col-lg-offset-3">
-               <h4>HELLO PEOPLE, MY COUNTRY IS</h4>
-               <input type="text" class="form-control container" id="culture">
-               <h4>WELCOME TO MY CULTURE</h4>
-           </div>
-       </div><!--/row -->
-   </div> <!-- /container -->
+<form action="/cultureform" method="post">
+     <div class="container">
+       <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+         <h4>HELLO PEOPLE, MY COUNTRY IS</h4>
+         <input type="text" class="form-control container" id="culture">
+         <h4>WELCOME TO MY CULTURE</h4>
+     </div>
+ </div><!--/row -->
+</div> <!-- /container -->
 </div><!--/headerwrap -->
 
 <div class="container">
 
     <h4 class="question">WHAT DOES YOUR CULTURE VALUE?</h4>
-    <textarea id="cultureValues" class="form-control formsize myclass"></textarea>
+    <textarea name="culture_value" id="cultureValues" class="form-control formsize myclass"></textarea>
 
     <h4 class="question">WHAT DO YOU GUY'S EAT?</h4>
-    <textarea id="cultureFood" class="form-control formsize myclass"></textarea>
+    <textarea name="culture_food" id="cultureFood" class="form-control formsize myclass"></textarea>
 
 
     <h4 class="question">WHAT ARE THE CURRENT FASHION TRENDS?</h4>
-    <textarea id="cultureFashion" class="form-control formsize myclass"></textarea>
+    <textarea name="culture_fashion" id="cultureFashion" class="form-control formsize myclass"></textarea>
     <br>
     <br>
 </div>
 </div><!--/row -->
-</div><!--/container -->
-	
-<div id="footerwrap">
-        <div class="container">
-            <div class="row centered">
-                            <button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit">Contribute to Society</button>
+    </div><!--/container -->
 
-      </div>
+        <div id="footerwrap">
+            <div class="container">
+                <div class="row centered">
+                    <button class="container btn btn-default navbar-btn margin center-block" id="submitData" type="submit">Contribute to Society</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-			</div>
-		</div>
-	</div>
+</form>
+</div>
 
 </body>
 </html>
@@ -75,40 +75,40 @@
 {% block javascript %}
 <script type="text/javascript"]>
 
-$(document).ready(function() {
-	$("#culture").focus();
+    $(document).ready(function() {
+       $("#culture").focus();
 
 
-Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
-var theCountry = Parse.Object.extend("Country");
+       Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
+       var theCountry = Parse.Object.extend("Country");
 
-    $("#submitData").click(function () {
-    var culture = $("#culture").val();
-    var cultureValues = $("#cultureValues").val();
-    var cultureFood = $("#cultureFood").val();
-    var cultureFashion = $("#cultureFashion").val();
-    
-    var citizenContribution = new theCountry();
+       $("#submitData").click(function () {
+        var culture = $("#culture").val();
+        var cultureValues = $("#cultureValues").val();
+        var cultureFood = $("#cultureFood").val();
+        var cultureFashion = $("#cultureFashion").val();
 
-    citizenContribution.save({ Name:culture, value: cultureValues, food:cultureFood, fashion:cultureFashion});
-    alert("Thank you for contributing to Society")
-    window.location = "/";
+        var citizenContribution = new theCountry();
+
+        citizenContribution.save({ Name:culture, value: cultureValues, food:cultureFood, fashion:cultureFashion});
+        alert("Thank you for contributing to Society")
+        window.location = "/";
     });
 
-console.log(culture);
-console.log(cultureValues);
-console.log(cultureFashion);
-console.log(cultureFood);
+       console.log(culture);
+       console.log(cultureValues);
+       console.log(cultureFashion);
+       console.log(cultureFood);
 
 
-function expandTextarea(id) {
-    var $element = $('.myclass').get(0);  
-    $element.addEventListener('keyup', function() {
-        this.style.overflow = 'hidden';
-        this.style.height = 0;
-        this.style.height = this.scrollHeight + 'px';
-    }, false);
-}
+       function expandTextarea(id) {
+        var $element = $('.myclass').get(0);  
+        $element.addEventListener('keyup', function() {
+            this.style.overflow = 'hidden';
+            this.style.height = 0;
+            this.style.height = this.scrollHeight + 'px';
+        }, false);
+    }
 
 
 
