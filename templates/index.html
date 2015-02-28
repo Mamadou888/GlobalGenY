@@ -47,9 +47,10 @@
 
 
     function othername() {
-        var localStorage.test = $("#country").val();
+        var localStorage = $("#country").val();
         tellme();
     };
+
     Parse.initialize("SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e", "2WmpR2LoC9pDCw5DZ5GByAf7LN7GuAKlRVZVTObF");
     $("#learnButton").click(function () {
         var theCountry = $("#clientsCountry").val();
@@ -63,12 +64,7 @@
         }
         // var currentCountry = Parse.Object.extend("countrySearched");
         // var usersCountry = new currentCountry();
-
-
-
     });
-
-
 
     function tellme() {
         alert("this" + test);

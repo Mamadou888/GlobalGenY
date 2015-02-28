@@ -21,6 +21,20 @@ def info(users_country):
 def cultureform():
     return render_template("cultureform.html")
 
+@app.route("/getdata")
+def getData():
+    url = "https://api.parse.com/1/classes/Country/"
+    theKeys = {
+       "X-Parse-Application-Id": "SQjJqeSyhwjwzd0NDiO4zQAqb2SQdLoDtj2EhF3e",
+       "X-Parse-REST-API-Key": "SBdjen5XouoZ0NFBeFH6Q4EwfY4tr2ZxwlnNDOw6"
+     }
+    getRequest = requests.get(url, headers=theKeys)
+    theData = getRequest.json()
+    theDataCountries = theData["results"]
+
+    return json.dumps(theDataCountries)
+
+
 @app.route("/chat")
 def chat():
     return render_template("chat.html")

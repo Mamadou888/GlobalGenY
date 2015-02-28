@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<title></title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="static/assets1/css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="static/assets1/css/style.css" rel="stylesheet">
+
+	<link href="static/assets1/css/font-awesome.min.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link href="static/assets1/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+	<div class="valuesInfo">
+		<div id="headerwrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						<a href="chat"><img src="static/assets1/chat.png" id="chat"></a>
+						<!--<p class="imgDescription">Chat</p>-->
+						<h4>THE CULTURE OF TEST:</h4>
+						<h1>{{ users_country }}</h1>
+					</div>
+				</div><!--/row -->
+			</div> <!-- /container -->
+		</div><!--/headerwrap -->
+
+		<div class="container">
+
+			<ul class="nav nav-tabs nav-justified">
+				<li class="active"><a data-toggle="tab" href="#sectionA">Etiquette</a></li>
+				<li><a data-toggle="tab" href="#sectionB">Food</a></li>
+				<li><a data-toggle="tab" href="#sectionC">Fashion</a></li>
+
+			</ul>
+
+			<div class="tab-content">
+
+				<div id="sectionA" class="tab-pane fade in active">
+					<h3>Values</h3>
+					<div class="valuesInfo">
+						<div class="row mt special">
+							<ul class="valuesList" style="list-style-type: none;">
+
+							</ul> 	
+						</div><!-- /row -->
+					</div>
+				</div>
+
+				<div id="sectionB" class="tab-pane fade">
+					<h3>Food</h3>
+					<div class="detailsOnCountry">
+						<div class="row mt special">
+							<ul class="foodList" style="list-style-type: none;">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div id="sectionC" class="tab-pane fade">
+					<h3>Fashion</h3>
+					<div class="detailsOnCountry">
+						<div class="row mt special">
+							<ul class="fashionList" style="list-style-type: none;">
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="footerwrap">
+			<div class="container">
+				<div class="row centered">
+
+				</div>
+			</div>
+
+		</div>
+
+
+	</body>
+
+	{% endblock %}
+
+
+
+	{% block javascript %}
+	<script type="text/javascript"]>
+
+	$(document).ready(function() {
+
+		{% for  i in range(0, 11 ) %} 
+			 
+		$(".valuesList").append("<li><p class='col-lg-4 centered si'>"+ 
+			{{ theDataCountries }}
+			", WTF"
+			+"</p></li>")
+
+		{% endfor %}
+		// i=0
+  //   # lengthOfDataCountries = len(theDataCountries)
+  //   # print lengthOfDataCountries
+
+	  //  	$(".valuesList").append("<li><p class='col-lg-4 centered si'>"+ cultureValues +"</p></li>")
+	  //  	$(".foodList").append("<li><p class='col-lg-4 centered si'>"+ cultureFood +"</p></li>")
+	 	// $(".fashionList").append("<li><p class='col-lg-4 centered si'>"+ cultureFashion+"</p></li>")		
+	
+	});
+
+</script>
+{% endblock %}
+
+
+
+
+
+
